@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+                <img src="{{key2.img.url}}" width="300" height="300">
+        </div>
+        <div class="col-md-6">
+            <p>Name: {{key2.name}}</p><p>Detail:  {{key2.desc}}</p><p>Released on: {{key2.year}} </p><br>
+            <a class="btn btn-warning" href="{% url 'movieapp:update' key2.id %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'movieapp:delete' key2.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
